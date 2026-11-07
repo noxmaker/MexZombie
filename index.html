@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#0b100e">
+  <meta name="description" content="La última luz de San Aureliano — una aventura cinematográfica de terror y supervivencia.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b100e'/%3E%3Cpath d='M16 3 19 13 29 16 19 19 16 29 13 19 3 16 13 13Z' fill='%23b49a6c'/%3E%3C/svg%3E">
+  <title>NOXVILL — La última luz</title>
+  <link rel="preload" href="assets/fonts/8vIU7ww63mVu7gtR-kwKxNvkNOjw-tbnTYo.ttf" as="font" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="game" aria-label="Juego de aventura de terror en tres dimensiones"></canvas>
+  <div class="film-grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <div class="topline"><span class="top-mark"><i></i> ARCHIVO DE CAMPO &nbsp;·&nbsp; 07.11.26</span><span class="top-right">SIERRA DE LOS CUERVOS &nbsp; / &nbsp; MÉXICO</span></div>
+
+  <section id="intro" class="intro" aria-label="Menú principal">
+    <div class="intro-kicker"><span class="kicker-line"></span> UNA EXPERIENCIA ORIGINAL DE SUPERVIVENCIA</div>
+    <div class="title-wrap"><h1>NOX<span>VILL</span></h1><div class="title-rule"><span></span><b>✳</b><span></span></div><div class="subtitle">LA ÚLTIMA LUZ</div></div>
+    <div class="intro-copy"><span class="chapter">CAPÍTULO I &nbsp; / &nbsp; SAN AURELIANO</span><h2>El pueblo<br>que olvidó rezar.</h2><p>Una señal de auxilio. Una carretera sin salida.<br>Y algo que todavía recuerda tu nombre.</p></div>
+    <button id="start" class="start-button"><span>INICIAR MISIÓN</span><b>↗</b></button>
+    <div class="intro-foot"><span>UNA HISTORIA DE NOXVILL</span><span>◈ &nbsp; SONIDO RECOMENDADO</span></div>
+    <div class="stamp" aria-hidden="true">S.A.<br><small>19—</small></div>
+  </section>
+
+  <section id="briefing" class="briefing hidden" aria-label="Informe de misión">
+    <div class="brief-card"><span class="chapter">INFORME DE MISIÓN &nbsp; / &nbsp; 01:43 A. M.</span><h2>La llamada<br>de <em>Alma.</em></h2><p>Hace tres noches, tu hermana dejó de responder. Esta noche, su radio volvió a encenderse.</p><blockquote>«Nox… no dejes que abran la puerta de la capilla.»</blockquote><div class="brief-meta"><span>ÚLTIMA UBICACIÓN</span><b>SAN AURELIANO, SIERRA NORTE</b></div><button id="deploy" class="start-button"><span>ENTRAR AL PUEBLO</span><b>→</b></button><div class="brief-skip">PULSA ENTER PARA CONTINUAR</div></div>
+  </section>
+
+  <div id="hud" class="hud hidden" aria-live="polite">
+    <div class="hud-top"><div class="mission-tag"><span class="mission-dot"></span><div><small>OBJETIVO ACTUAL</small><strong id="objective">Encuentra la señal de Alma</strong></div></div><div class="chapter-tag">SAN AURELIANO <span>—</span> 01:43</div></div>
+    <div id="crosshair" class="crosshair"><i></i><i></i><i></i><i></i><b></b></div>
+    <div id="prompt" class="prompt"></div>
+    <div id="toast" class="toast"></div>
+    <div id="hurt" class="hurt-flash"></div>
+    <div class="hud-bottom"><div class="health-wrap"><div class="health-icon">✳</div><div class="health-info"><span>ESTADO FÍSICO</span><div class="health-track"><i id="health-fill"></i></div></div><b id="health-text">100</b></div><div class="controls-hint"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> <span>MOVER</span><kbd>R</kbd> <span>RECARGAR</span><kbd>F</kbd> <span>BOTIQUÍN</span></div><div class="weapon"><div class="weapon-copy"><span>ARMA SECUNDARIA</span><b>P-92 &nbsp;<small>9 mm</small></b></div><div class="ammo"><strong id="ammo-mag">12</strong><span>/</span><b id="ammo-reserve">36</b></div><div class="weapon-icon">⌁</div></div></div>
+    <div id="objective-banner" class="objective-banner"><span>✳</span><b>EL PUEBLO ESTÁ EN SILENCIO.</b><small>ENCUENTRA EL ORIGEN DE LA SEÑAL</small></div>
+    <div id="end-screen" class="end-screen hidden"><span class="chapter">SAN AURELIANO &nbsp; / &nbsp; FIN DEL CAPÍTULO I</span><h2 id="end-title">La señal continúa.</h2><p id="end-copy"></p><button id="restart" class="start-button"><span>VOLVER A INTENTAR</span><b>↻</b></button></div>
+  </div>
+
+  <div id="loading" class="loading"><span class="loading-seal">✳</span><b>PREPARANDO LA SIERRA</b><div class="loading-track"><i></i></div></div>
+  <script type="module" src="js/game.js"></script>
+</body>
+</html>
